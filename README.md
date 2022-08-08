@@ -1,6 +1,8 @@
 # rickandmortyapp
 
-A new Flutter project.
+A flutter project made to prove my skills.
+
+Thanks for considerate my aplication!
 
 ## Getting Started
 
