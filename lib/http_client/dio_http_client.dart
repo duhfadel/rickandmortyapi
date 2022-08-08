@@ -7,8 +7,10 @@ class DioHttpClient {
     _setupDio();
   }
 
+  String base = 'https://rickandmortyapi.com/api/';
+
   void _setupDio() {
-    dio.options.baseUrl = 'https://rickandmortyapi.com/api/';
+    dio.options.baseUrl = base;
     dio.options.connectTimeout = const Duration(seconds: 30).inMilliseconds;
   }
 }
