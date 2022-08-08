@@ -10,7 +10,7 @@ CharacterItem _$CharacterItemFromJson(Map<String, dynamic> json) =>
     CharacterItem(
       id: json['id'] as int?,
       name: json['name'] as String?,
-      status: json['status'] as String?,
+      status: $enumDecodeNullable(_$StatusEnumMap, json['status']),
       species: json['species'] as String?,
       type: json['type'] as String?,
       gender: $enumDecodeNullable(_$GenderEnumMap, json['gender']),
@@ -33,7 +33,7 @@ Map<String, dynamic> _$CharacterItemToJson(CharacterItem instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'status': instance.status,
+      'status': _$StatusEnumMap[instance.status],
       'species': instance.species,
       'type': instance.type,
       'gender': _$GenderEnumMap[instance.gender],
@@ -44,6 +44,12 @@ Map<String, dynamic> _$CharacterItemToJson(CharacterItem instance) =>
       'url': instance.url,
       'created': instance.created?.toIso8601String(),
     };
+
+const _$StatusEnumMap = {
+  Status.alive: 'Alive',
+  Status.dead: 'Dead',
+  Status.unknown: 'unknown',
+};
 
 const _$GenderEnumMap = {
   Gender.male: 'Male',

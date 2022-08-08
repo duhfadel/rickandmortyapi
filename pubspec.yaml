@@ -40,6 +40,8 @@ dependencies:
   build_runner: ^2.2.0
   dio: ^4.0.6
   provider: ^6.0.3
+  string_extensions: ^0.6.2
+
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +53,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -93,3 +97,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+      - family: get_schwifty
+        fonts:
+          - asset: fonts/get_schwifty.ttf

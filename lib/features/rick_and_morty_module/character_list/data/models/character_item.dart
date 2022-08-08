@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 part 'character_item.g.dart';
+
 @JsonSerializable()
 class CharacterItem {
   CharacterItem({
@@ -20,7 +21,7 @@ class CharacterItem {
 
   int? id;
   String? name;
-  String? status;
+  Status? status;
   String? species;
   String? type;
   Gender? gender;
@@ -30,10 +31,20 @@ class CharacterItem {
   List<String>? episode;
   String? url;
   DateTime? created;
+  String nameFirstEpisodeAppeared = '';
 
   factory CharacterItem.fromJson(Map<String, dynamic> json) =>
       _$CharacterItemFromJson(json);
   Map<String, dynamic> toJson() => _$CharacterItemToJson(this);
+}
+
+enum Status {
+  @JsonValue('Alive')
+  alive,
+  @JsonValue('Dead')
+  dead,
+  @JsonValue('unknown')
+  unknown
 }
 
 enum Gender {
@@ -42,9 +53,9 @@ enum Gender {
   @JsonValue('Female')
   female,
   @JsonValue('unknown')
-  unknown
-}
+  unknown,
 
+}
 
 @JsonSerializable()
 class Location {
