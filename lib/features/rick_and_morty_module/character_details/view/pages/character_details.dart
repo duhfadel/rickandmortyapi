@@ -38,17 +38,14 @@ class CharacterDetailsView extends StatelessWidget {
                   Center(
                     child: Text(state.characterItem!.name!,
                         maxLines: 2,
-                        style: const TextStyle(
-                            fontSize: 34, fontFamily: 'get_schwifty')),
+                        style: Theme.of(context).textTheme.headline2),
                   ),
                   Row(
                     children: [
                       const Text('Species: '),
                       Text(
                         state.characterItem!.species!,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ],
                   ),

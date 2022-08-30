@@ -69,9 +69,7 @@ class HomeView extends StatelessWidget {
                               children: [
                                 Text(
                                   character?.name ?? '',
-                                  style: const TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
+                                  style: Theme.of(context).textTheme.headline1,
                                 ),
                                 Row(
                                   children: [
@@ -89,10 +87,9 @@ class HomeView extends StatelessWidget {
                                 const SizedBox(
                                   height: 8,
                                 ),
-                                const Text(
+                                 Text(
                                   'Last Known location:',
-                                  style: TextStyle(
-                                      color: Colors.grey, fontSize: 11),
+                                  style: Theme.of(context).textTheme.bodyText2,
                                 ),
                                 Text(
                                   character.location!.name!,
@@ -100,10 +97,9 @@ class HomeView extends StatelessWidget {
                                 const SizedBox(
                                   height: 8,
                                 ),
-                                const Text(
+                                 Text(
                                   'First seen in:',
-                                  style: TextStyle(
-                                      color: Colors.grey, fontSize: 11),
+                                  style: Theme.of(context).textTheme.bodyText2,
                                 ),
                                 Text(character.nameFirstEpisodeAppeared),
                                 const SizedBox(
